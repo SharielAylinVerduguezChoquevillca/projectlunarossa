@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUNA ROSSA - Tu tienda de última moda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_index.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="/" class="logo">LUNA ROSSA</a>
+            </div>
+            <div class="navbar-right">
+                <a href="/login" class="login-link">
+                    <i class="fas fa-door-open"></i> Iniciar sesión
+                </a>
+            </div>
+        </nav>        
+    </header>
+    
+    <div class="seccion_bienvenida">
+        <h1>Bienvenido a LUNA ROSSA</h1>
+        <div id="bienvenida">
+            <p>Descubre las mejores prendas de moda a precios irresistibles. ¡Explora nuestra colección y elige el estilo que más te inspire!</p>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 LUNA ROSSA - Tu tienda de ropa de confianza.</p>
+    </footer>
+</body>
+</html>

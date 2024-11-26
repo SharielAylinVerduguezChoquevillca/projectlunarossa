@@ -1,0 +1,86 @@
+/* Estilos generales */
+body {
+    font-family: 'Merriweather';
+    background-color: #fea641;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    color: #ae0000 ;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el formulario */
+#registerForm {
+    background-color: #fc6100;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.386);
+    width: 100%;
+    max-width: 400px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ae0000;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #ae0000; /* Cambia el borde al hacer foco */
+    outline: none;
+}
+
+button {
+    width: 105%;
+    padding: 11px;
+    background-color:#975b00;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color:#ae0000;
+}
+
+button:active {
+    background-color: #fc6100;
+}
+
+/* Estilo para el enlace de redirección */
+p {
+    text-align: center;
+    font-size: 14px;
+    color: #fea641;
+    margin-top: 10px;
+}
+
+p a {
+    color: #ae0000;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}

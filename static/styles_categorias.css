@@ -1,0 +1,234 @@
+/* General */
+body {
+    font-family: 'Merriweather';
+    background-color: #fea641;
+    margin: 0;
+    padding: 0;
+    cursor: grabbing;
+}
+
+/* Navbar estilos */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 25px;
+    background-color: #fea641;
+    color: #ae0000;
+    user-select: none;
+}
+
+.navbar-left .logo {
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo:hover{
+    color: #ae0000;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.login-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.login-link i {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+
+.login-link:hover {
+    color: #ae0000; /* Efecto hover */
+}
+
+/*Seccion Bienvenida*/
+.seccion_bienvenida {
+    background: linear-gradient(rgba(249, 243, 183, 0.429), rgba(248, 239, 158, 0.443)),
+                url('fondo9.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    cursor: default;
+    user-select: none;
+}
+
+
+.seccion_bienvenida h1{
+    width: 50%;
+    margin: 0;
+    color: #975b00;
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 20px;
+}
+
+.seccion_bienvenida h1:hover{
+    color: #fea641;
+}
+
+#bienvenida{
+    width: 60%;
+    text-align: center;
+    font-size: 1.9rem;
+}
+
+#bienvenida:hover{
+    color: #ae0000;
+}
+
+
+/* Estilo de la cabecera de la categoría */
+.categoria-header {
+    background-color: #fea641;
+    padding: 30px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.categoria-header h1 {
+    font-size: 3rem;
+    margin-top: 40px;
+    color: #ae0000;
+    text-align: center;
+    margin: 0;
+}
+
+.categoria-header h1:hover{
+    color: #ffffff;
+}
+
+/* Sección de productos */
+.productos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #ffd885;
+    padding: 40px 20px;
+}
+
+.producto-card {
+    background-color: #fc6100;
+    border-radius: 125px;
+    box-shadow: 0 8px 12px rgb(255, 255, 255);
+    margin: 50px;
+    padding: 20px;
+    text-align: center;
+    width: 25%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.producto-card:hover {
+    transform: scale(1.05);
+}
+
+.producto-imagen {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.producto-card h3 {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.producto-card p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.detalle-link {
+    text-decoration: none;
+    color: #770000;
+    font-weight: bold;
+    transition: color 0.3s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.detalle-link:hover {
+    color: #fea641;
+}
+
+/* Footer */
+/* Footer */
+footer {
+    background-color: #fea641;
+    padding: 35px 0;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: #ae0000;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: #011526;
+    background-color: #ff8282;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .productos-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto-card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .producto-card {
+        width: 100%;
+    }
+}
+
+/* Estilos para el scroll */
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #ae0000;
+    border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #aa5b00;
+}
+
+body::-webkit-scrollbar-track {
+    background: #fc6100;
+    border-radius: 8px;
+}

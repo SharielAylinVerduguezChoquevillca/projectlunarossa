@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ categoria.name }} - LUNA ROSSA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_categorias.css') }}">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <a href="/" class="logo">LUNA ROSSA</a>
+        </div>
+        <div class="navbar-right">
+            <a href="/login" class="login-link">
+                <i class="fas fa-door-open"></i> Iniciar sesión
+            </a>
+        </div>
+    </header>
+
+    <div class="seccion_bienvenida">
+        <h1>{{ categoria.name }}</h1>
+        <div id="bienvenida">
+            <p>
+                Explora nuestra selección de productos únicos en {{ categoria.name }}. 
+                Descubre las últimas tendencias en moda y encuentra prendas para cada ocasión.
+                Desde ropa casual hasta looks elegantes, ¡explora nuestra colección y viste con estilo!
+            </p>
+        </div>
+    </div>
+
+    <section class="categoria-header">
+        <h1>{{ categoria.name }}</h1>
+    </section>
+
+    <div class="productos-grid">
+        {% if productos %}
+            {% for producto in productos %}
+            <div class="producto-card">
+                <h3>{{ producto.nombre }}</h3>
+                <p class="precio">Precio: ${{ producto.precio }}</p>
+                <p class="stock">Stock disponible: {{ producto.stock }}</p>
+                
+                {% if producto.imagen_url %}
+                <img class="producto-imagen" src="{{ producto.imagen_url }}" alt="{{ producto.nombre }}">
+                {% endif %}
+                
+                <p><a class="detalle-link" href="{{ url_for('producto_detalle', id=producto.id) }}">Ver detalles del producto</a></p>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>No hay productos en esta categoría.</p>
+        {% endif %}
+    </div>
+
+    <footer>
+        <a href="{{ url_for('lista_productos') }}" class="volver-link">Volver a todas las categorías</a>
+    </footer>
+
+</body>
+
+</html>

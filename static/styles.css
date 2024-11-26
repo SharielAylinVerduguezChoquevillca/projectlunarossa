@@ -2,45 +2,45 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Merriweather';
     color: #fff; /* Color del texto */
-    background: url('fondo1.jpg') no-repeat center center fixed;
+    background: url('fondo7.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 /* Estilo del contenedor del login */
 .login-container {
-    max-width: 400px;
+    max-width: 500px;
     margin: 100px auto;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 149, 43, 0.642); /* Fondo oscuro semi-transparente */
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
     text-align: center;
 }
 
 /* Estilo de los elementos del formulario */
 h2 {
-    color: #d8aaff; /* Color lila */
+    color: #ae0000;
 }
 
 label {
     display: block;
     margin: 10px 0 5px;
-    color: #b5d9f0; /* Color azul claro */
+    color: #ffffff;
 }
 
 input[type="text"], input[type="password"] {
     width: 100%;
     padding: 10px;
     margin: 5px 0 15px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
+    border: 1px solid #ae0000;
+    border-radius: 10px;
     box-sizing: border-box;
 }
 
 button {
-    background-color: #6c63ff; /* Color azul fuerte */
+    background-color: #975b00;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -50,10 +50,9 @@ button {
 }
 
 button:hover {
-    background-color: #5a54e4; /* Azul más oscuro al pasar el ratón */
+    background-color: #ae0000;
 }
 
-/* Estilo del mensaje */
 #message {
     margin-top: 10px;
     font-size: 16px;

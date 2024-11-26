@@ -4,7 +4,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    fetch('http://localhost:5000/api/users/login', {
+    fetch('http://127.0.0.1:5000/api/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -14,16 +14,35 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             password: password
         })
     })
+    
     .then(response => response.json())
     .then(data => {
         if (data.message === 'Login successful') {
-            document.getElementById('message').textContent = 'Login successful!';
-            document.getElementById('message').style.color = 'green';
-            // Redirigir a otra página o almacenar información del usuario si es necesario
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = 'Login successful!';
+            
+            // Estilos para el mensaje de éxito
+            messageElement.style.color = 'green';
+            messageElement.style.fontSize = '20px';
+            messageElement.style.fontWeight = 'bold';
+            messageElement.style.backgroundColor = '#e0f9e0';
+            messageElement.style.padding = '10px'; 
+            messageElement.style.borderRadius = '5px';
+            setTimeout(() => {
+                window.location.href = '/';
+            }, 2000);
         } else {
-            document.getElementById('message').textContent = data.message;
-            document.getElementById('message').style.color = 'red';
-        }
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = data.message;
+        
+            // Estilos para el mensaje de error
+            messageElement.style.color = 'red';
+            messageElement.style.fontSize = '20px'; 
+            messageElement.style.fontWeight = 'bold';
+            messageElement.style.backgroundColor = '#f9e0e0'; 
+            messageElement.style.padding = '10px';
+            messageElement.style.borderRadius = '5px';
+        }        
     })
     .catch(error => {
         console.error('Error:', error);

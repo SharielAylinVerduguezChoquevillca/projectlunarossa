@@ -1,0 +1,279 @@
+/* General */
+body {
+    font-family: 'Merriweather';
+    background-color: #fea641;
+    margin: 0;
+    padding: 0;
+    cursor: grabbing;
+}
+
+/* Navbar estilos */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 25px;
+    background-color: #ae0000;
+    color: #fea641;
+}
+
+.navbar-left .logo {
+    font-size: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo:hover{
+    color: #fea641;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.login-link {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.login-link i {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+
+.login-link:hover {
+    color: #fea641; /* Efecto hover */
+}
+
+
+/*Seccion Bienvenida*/
+.seccion_bienvenida {
+    background: linear-gradient(rgba(255, 243, 164, 0), rgba(255, 243, 164, 0)), /* Capa oscura con opacidad */
+                url('fondo2.jpg') no-repeat top center fixed; /* Imagen de fondo */
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    cursor: default;
+    user-select: none;
+}
+
+
+.seccion_bienvenida h1{
+    margin: 0;
+    color: #4f0000;
+    text-align: center;
+    font-size: 5rem;
+    margin-top: 20px;
+}
+
+.seccion_bienvenida h1:hover{
+    color: #fea641;
+}
+
+#bienvenida{
+    width: 40%;
+    text-align: center;
+    font-size: 2.7rem;
+}
+
+#bienvenida:hover{
+    color: #ae0000;
+}
+
+h2 {
+    font-size: 4rem;
+    margin-top: 40px;
+    color: #ae0000;
+    text-align: center;
+    margin: 0;
+}
+
+.subtitles{
+    margin: 50px;
+}
+
+
+/* Navigation (categories) */
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #cb4f02;
+    margin: 20px 0;
+}
+
+.categoria {
+    margin: 40px;
+    text-align: center;
+    max-width: 200px;
+}
+
+.imagen-categoria {
+    width: 150px;
+    height: 150px;
+    border-radius: 0%;
+    object-fit: cover;
+    padding: 5px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.993);
+    transition: transform 0.5s;
+}
+
+.categoria a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.categoria:hover .imagen-categoria {
+    transform: scale(1.2);
+    border: 5px solid #ff8800;
+}
+
+.categoria p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+
+/* Estilos para la sección de productos */
+div.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+div.product-item {
+    background-color:#fc6100;
+    border-radius: 100px;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 15%; /* Cada producto ocupará aproximadamente un 30% del contenedor */
+    box-sizing: border-box;
+    transition: transform 0.3s;
+}
+
+div.product-item:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+}
+
+div.product-item img {
+    width: 100%; /* Las imágenes ocuparán el 100% del ancho del contenedor del producto */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 200px; /* Limita el ancho máximo de las imágenes */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para los títulos y descripciones de los productos */
+div.product-item h3 {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+div.product-item p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el enlace de detalles del producto */
+div.product-item a {
+    text-decoration: none;
+    color: #ae0000;
+    font-weight: bold;
+    transition: color 0.3s;
+    cursor: pointer;
+    user-select: none;
+}
+
+div.product-item a:hover {
+    color: #fea641;
+}
+
+/* Footer */
+footer {
+    background-color: #ae0000;
+    color: #ffffff;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 0px;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        margin-top: 10px;
+    }
+    
+    li {
+        flex: 0 1 45%;
+    }
+
+    div.product-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    li {
+        flex: 0 1 100%;
+    }
+
+    div.product-item {
+        width: 100%;
+    }
+}
+
+
+/* Tamaño del scroll */
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Estilos barra (thumb) de scroll */
+body::-webkit-scrollbar-thumb {
+    background: #d37f00; /* Color principal del thumb */
+    border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background-color: #975b00; /* Color al hacer clic en el thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #fc6100; /* Color al pasar el cursor sobre el thumb */
+}
+
+/* Estilos track de scroll */
+body::-webkit-scrollbar-track {
+    background: #764700; /* Color del track del scroll */
+    border-radius: 8px;
+}
+  
+body::-webkit-scrollbar-track:hover, 
+body:-webkit-scrollbar-track:active {
+    background: #0D0D0D; /* Color del track cuando el scroll está activo o al pasar el cursor */
+}
+
